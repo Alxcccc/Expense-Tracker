@@ -9,7 +9,7 @@ db = expense_tracker_service.DataBase()
 # Models
 from models.expense import Expense
 
-app = typer.Typer()
+app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -52,7 +52,7 @@ def delete(id: int = 0):
             typer.secho("Expense deleted successfully", fg=typer.colors.BRIGHT_GREEN)
             return None
         typer.secho(f"Delete: {result}", fg=typer.colors.BRIGHT_RED)
-        
+
 
 
 if __name__ == "__main__":
