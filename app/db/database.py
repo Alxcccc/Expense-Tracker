@@ -6,6 +6,7 @@ from contextlib import contextmanager
 engine = create_engine("mysql+pymysql://root:facebookalec7@localhost/expensetracker")
 Session = sessionmaker(bind=engine)
 
+
 @contextmanager
 def get_session():
     session = Session()
