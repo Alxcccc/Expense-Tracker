@@ -13,11 +13,6 @@ app = typer.Typer()
 console = Console()
 
 
-def main():
-    # Verifica si se han pasado argumentos
-    if not typer.get_app_dir("myapp"):
-        print("By Alxc")
-
 @app.command()
 def add(description: str = "", amount: int = 0):
     if description and amount:
